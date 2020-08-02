@@ -1,12 +1,27 @@
 name: "zstinsight"
 title: "zst Insight"
 description: |
-  zst Insight
-output_dir: "_site"
+  Insight about China stock market from Chris Zheng.
+base_url: https://beta.rstudioconnect.com/content/11424/
+collections:
+  posts:
+    disqus:
+        shortname: zst-insight
+        hidden: false
+    share: [twitter, linkedin]
+    citations: false
+    subscribe: _subscribe.html
+    custom: _custom.html
 navbar:
+  logo: images/zstmodelr.png
   right:
     - text: "Home"
       href: index.html
+    - text: "Gallery"
+      href: gallery.html
     - text: "About"
       href: about.html
+    - icon: fa fa-rss
+      href: index.xml
+output_dir: "_site"
 output: distill::distill_article
